@@ -1,10 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { ExampleModel } from './models/example.model';
+
+export const examples: ExampleModel[] = [
+  {label:	'Intro'},
+  {label:	'NgFor'},
+  {label:	'NgSwitch'},
+  {label:	'NgStyle'},
+  {label:	'NgClass'},
+  {label:	'NgNonBindable'}
+];
 
 @NgModule({
   declarations: [
@@ -14,7 +23,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    { provide: 'ExampleModels',	useValue: examples }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}
