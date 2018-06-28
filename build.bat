@@ -1,1 +1,1 @@
-start cmd /k ng build
+ng build
