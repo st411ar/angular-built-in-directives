@@ -1,8 +1,6 @@
-<p>
-  sidebar works!
-</p>
 <div class="ui vertical pointing menu">
-	<div *ngFor="let item of items">
-		item.label: "{{item.label}}"
-	</div>
+	<app-sidebar-item
+		*ngFor="let item of items"
+		[item]="item"
+	></app-sidebar-item>
 </div>

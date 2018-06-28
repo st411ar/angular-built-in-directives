@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { ExampleModel } from './models/example.model';
+import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';
 
 export const examples: ExampleModel[] = [
   {label:	'Intro'},
@@ -18,7 +19,8 @@ export const examples: ExampleModel[] = [
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    SidebarComponent,
+    SidebarItemComponent
   ],
   imports: [
     BrowserModule
