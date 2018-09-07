@@ -15,6 +15,7 @@ import { IntroComponent } from './intro/intro.component';
 import { NgIfExampleComponent } from './ng-if-example/ng-if-example.component';
 import { NgForExampleComponent } from './ng-for-example/ng-for-example.component';
 import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
+import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.component';
 
 export const examples: ExampleModel[] = [
 	{
@@ -32,6 +33,10 @@ export const examples: ExampleModel[] = [
 	{
 		label: 'NgSwitch',
 		path: 'ng_switch'
+	},
+	{
+		label: 'NgStyle',
+		path: 'ng_style'
 	},
 //  {label:	'NgStyle'},
 //  {label:	'NgClass'},
@@ -59,6 +64,11 @@ const routes: Routes = [
 		component: NgSwitchExampleComponent,
 		pathMatch: 'full'
 	},
+	{
+		path: 'ng_style',
+		component: NgStyleExampleComponent,
+		pathMatch: 'full'
+	},
 ];
 
 @NgModule({
@@ -69,7 +79,8 @@ const routes: Routes = [
 		IntroComponent,
 		NgIfExampleComponent,
 		NgForExampleComponent,
-		NgSwitchExampleComponent
+		NgSwitchExampleComponent,
+		NgStyleExampleComponent
 	],
 	imports: [
 		BrowserModule,
