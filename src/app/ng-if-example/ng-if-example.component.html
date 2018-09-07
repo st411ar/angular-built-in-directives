@@ -1,0 +1,7 @@
+<h4 class="ui horizontal divider header">
+	Simple examples of the ngIf directive
+</h4>
+<div *ngIf="false">This element is never displayed</div>
+<div *ngIf="a > b">This element is displayed if a is more than b (a = {{a}}, b = {{b}})</div>
+<div *ngIf="str === 'yes'">This element is displayed if str is the string "yes" (str = "{{str}}")</div>
+<div *ngIf="myFunc()">This element is displayed if myFunc returns truthy (myFunc() = {{myFunc()}})</div>

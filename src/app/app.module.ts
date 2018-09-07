@@ -12,12 +12,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ExampleModel } from './models/example.model';
 import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';
 import { IntroComponent } from './intro/intro.component';
+import { NgIfExampleComponent } from './ng-if-example/ng-if-example.component';
 import { NgForExampleComponent } from './ng-for-example/ng-for-example.component';
 
 export const examples: ExampleModel[] = [
 	{
 		label: 'Intro',
 		path: ''
+	},
+	{
+		label: 'NgIf',
+		path: 'ng_if'
 	},
 	{
 		label: 'NgFor',
@@ -36,6 +41,11 @@ const routes: Routes = [
 		pathMatch: 'full'
 	},
 	{
+		path: 'ng_if',
+		component: NgIfExampleComponent,
+		pathMatch: 'full'
+	},
+	{
 		path: 'ng_for',
 		component: NgForExampleComponent,
 		pathMatch: 'full'
@@ -48,6 +58,7 @@ const routes: Routes = [
 		SidebarComponent,
 		SidebarItemComponent,
 		IntroComponent,
+		NgIfExampleComponent,
 		NgForExampleComponent
 	],
 	imports: [

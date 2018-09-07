@@ -5,9 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ng-for-example.component.html'
 })
 export class NgForExampleComponent implements OnInit {
+	constructor() {}
 
-  constructor() {}
-
-  ngOnInit() {}
+	ngOnInit() {}
 
 }
