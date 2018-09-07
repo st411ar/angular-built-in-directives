@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import {
 	Component,
 	Input,
@@ -19,8 +20,20 @@ export class SidebarItemComponent implements OnInit {
 
 	constructor(
 		private router: Router,
-		private route: ActivatedRoute
+		private route: ActivatedRoute,
+		private location: Location
 	) {}
 
 	ngOnInit() {}
+
+	isActive(): boolean {
+		let itemPath: string = this.item.path;
+		if (itemPath !== ``) {
+			itemPath = `/${itemPath}`;
+		}
+
+		let currentPath: string = this.location.path();
+
+		return itemPath === currentPath;
+	}
 }
