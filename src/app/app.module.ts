@@ -12,10 +12,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ExampleModel } from './models/example.model';
 import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';
 import { IntroComponent } from './intro/intro.component';
-import { NgIfExampleComponent } from './ng-if-example/ng-if-example.component';
+import { NgClassExampleComponent } from './ng-class-example/ng-class-example.component';
 import { NgForExampleComponent } from './ng-for-example/ng-for-example.component';
-import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
+import { NgIfExampleComponent } from './ng-if-example/ng-if-example.component';
 import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.component';
+import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
 
 export const examples: ExampleModel[] = [
 	{
@@ -23,23 +24,25 @@ export const examples: ExampleModel[] = [
 		path: ''
 	},
 	{
-		label: 'NgIf',
-		path: 'ng_if'
+		label: 'NgClass',
+		path: 'ng_class'
 	},
 	{
 		label: 'NgFor',
 		path: 'ng_for'
 	},
 	{
-		label: 'NgSwitch',
-		path: 'ng_switch'
+		label: 'NgIf',
+		path: 'ng_if'
 	},
 	{
 		label: 'NgStyle',
 		path: 'ng_style'
 	},
-//  {label:	'NgStyle'},
-//  {label:	'NgClass'},
+	{
+		label: 'NgSwitch',
+		path: 'ng_switch'
+	},
 //  {label:	'NgNonBindable'}
 ];
 
@@ -50,8 +53,8 @@ const routes: Routes = [
 		pathMatch: 'full'
 	},
 	{
-		path: 'ng_if',
-		component: NgIfExampleComponent,
+		path: 'ng_class',
+		component: NgClassExampleComponent,
 		pathMatch: 'full'
 	},
 	{
@@ -60,13 +63,18 @@ const routes: Routes = [
 		pathMatch: 'full'
 	},
 	{
-		path: 'ng_switch',
-		component: NgSwitchExampleComponent,
+		path: 'ng_if',
+		component: NgIfExampleComponent,
 		pathMatch: 'full'
 	},
 	{
 		path: 'ng_style',
 		component: NgStyleExampleComponent,
+		pathMatch: 'full'
+	},
+	{
+		path: 'ng_switch',
+		component: NgSwitchExampleComponent,
 		pathMatch: 'full'
 	},
 ];
@@ -77,10 +85,11 @@ const routes: Routes = [
 		SidebarComponent,
 		SidebarItemComponent,
 		IntroComponent,
-		NgIfExampleComponent,
+		NgClassExampleComponent,
 		NgForExampleComponent,
+		NgIfExampleComponent,
+		NgStyleExampleComponent,
 		NgSwitchExampleComponent,
-		NgStyleExampleComponent
 	],
 	imports: [
 		BrowserModule,
