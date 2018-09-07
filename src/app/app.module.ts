@@ -14,6 +14,7 @@ import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.compon
 import { IntroComponent } from './intro/intro.component';
 import { NgIfExampleComponent } from './ng-if-example/ng-if-example.component';
 import { NgForExampleComponent } from './ng-for-example/ng-for-example.component';
+import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
 
 export const examples: ExampleModel[] = [
 	{
@@ -28,7 +29,10 @@ export const examples: ExampleModel[] = [
 		label: 'NgFor',
 		path: 'ng_for'
 	},
-//  {label:	'NgSwitch'},
+	{
+		label: 'NgSwitch',
+		path: 'ng_switch'
+	},
 //  {label:	'NgStyle'},
 //  {label:	'NgClass'},
 //  {label:	'NgNonBindable'}
@@ -50,6 +54,11 @@ const routes: Routes = [
 		component: NgForExampleComponent,
 		pathMatch: 'full'
 	},
+	{
+		path: 'ng_switch',
+		component: NgSwitchExampleComponent,
+		pathMatch: 'full'
+	},
 ];
 
 @NgModule({
@@ -59,7 +68,8 @@ const routes: Routes = [
 		SidebarItemComponent,
 		IntroComponent,
 		NgIfExampleComponent,
-		NgForExampleComponent
+		NgForExampleComponent,
+		NgSwitchExampleComponent
 	],
 	imports: [
 		BrowserModule,
