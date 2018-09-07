@@ -1,7 +1,57 @@
 <h4 class="ui horizontal divider header">
 	Simple examples of the ngIf directive
 </h4>
+
+<hr/>
+
+<h4 class="ui horizontal divider header">
+	Never displayed element always because *ngIf = false
+</h4>
 <div *ngIf="false">This element is never displayed</div>
-<div *ngIf="a > b">This element is displayed if a is more than b (a = {{a}}, b = {{b}})</div>
-<div *ngIf="str === 'yes'">This element is displayed if str is the string "yes" (str = "{{str}}")</div>
-<div *ngIf="myFunc()">This element is displayed if myFunc returns truthy (myFunc() = {{myFunc()}})</div>
+
+<h4 class="ui horizontal divider header">
+	Element is displayed if a is more than b (a = {{a}}, b = {{b}})
+</h4>
+<div *ngIf="a > b">This element is displayed if a is more than b</div>
+<div style="margin-top: 20px;">
+	<button class="ui primary button" (click)="increaseA()">
+		Increase a by 1
+	</button>
+	<button class="ui primary button" (click)="decreaseA()">
+		Decrease a by 1
+	</button>
+</div>
+<div style="margin-top: 20px;">
+	<button class="ui primary button" (click)="increaseB()">
+		Increase b by 1
+	</button>
+	<button class="ui primary button" (click)="decreaseB()">
+		Decrease b by 1
+	</button>
+</div>
+
+<h4 class="ui horizontal divider header">
+	Element is displayed if str is the string "yes" (str = "{{str}}")
+</h4>
+<div *ngIf="str === 'yes'">This element is displayed if str is the string "yes"</div>
+<div style="margin-top: 20px;">
+	<button class="ui primary button" (click)="setStrYes()">
+		set str to "yes"
+	</button>
+	<button class="ui primary button" (click)="setStrSomeValue()">
+		set str to some value
+	</button>
+</div>
+
+<h4 class="ui horizontal divider header">
+	Element is displayed if myFunc returns truthy (myFunc() = {{myFunc()}})
+</h4>
+<div *ngIf="myFunc()">This element is displayed if myFunc returns truthy</div>
+<div style="margin-top: 20px;">
+	<button class="ui primary button" (click)="setMyFuncResultTrue()">
+		set myFunc returns result TRUE
+	</button>
+	<button class="ui primary button" (click)="setMyFuncResultFalse()">
+		set myFunc returns result FALSE
+	</button>
+</div>
