@@ -1,3 +1,4 @@
 export interface ExampleModel {
-  label: string;
+	label: string;
+	path: string;
 }

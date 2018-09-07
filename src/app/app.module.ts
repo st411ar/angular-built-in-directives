@@ -12,10 +12,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ExampleModel } from './models/example.model';
 import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';
 import { IntroComponent } from './intro/intro.component';
+import { NgForExampleComponent } from './ng-for-example/ng-for-example.component';
 
 export const examples: ExampleModel[] = [
-	{label:	'Intro'},
-//  {label:	'NgFor'},
+	{
+		label: 'Intro',
+		path: ''
+	},
+	{
+		label: 'NgFor',
+		path: 'ng_for'
+	},
 //  {label:	'NgSwitch'},
 //  {label:	'NgStyle'},
 //  {label:	'NgClass'},
@@ -23,7 +30,16 @@ export const examples: ExampleModel[] = [
 ];
 
 const routes: Routes = [
-	{ path: '', component: IntroComponent, pathMatch: 'full' }
+	{
+		path: '',
+		component: IntroComponent,
+		pathMatch: 'full'
+	},
+	{
+		path: 'ng_for',
+		component: NgForExampleComponent,
+		pathMatch: 'full'
+	},
 ];
 
 @NgModule({
@@ -31,7 +47,8 @@ const routes: Routes = [
 		AppComponent,
 		SidebarComponent,
 		SidebarItemComponent,
-		IntroComponent
+		IntroComponent,
+		NgForExampleComponent
 	],
 	imports: [
 		BrowserModule,

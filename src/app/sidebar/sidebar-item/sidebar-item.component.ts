@@ -3,6 +3,10 @@ import {
 	Input,
 	OnInit
 } from '@angular/core';
+import {
+	ActivatedRoute,
+	Router
+} from '@angular/router';
 
 import { ExampleModel } from '../../models/example.model';
 
@@ -13,7 +17,10 @@ import { ExampleModel } from '../../models/example.model';
 export class SidebarItemComponent implements OnInit {
 	@Input('item') item: ExampleModel;
 
-	constructor() {}
+	constructor(
+		private router: Router,
+		private route: ActivatedRoute
+	) {}
 
 	ngOnInit() {}
 }
