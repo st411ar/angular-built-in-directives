@@ -12,12 +12,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ExampleModel } from './models/example.model';
 import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';
 import { IntroComponent } from './intro/intro.component';
-import { NgClassExampleComponent } from './ng-class-example/ng-class-example.component';
-import { NgForExampleComponent } from './ng-for-example/ng-for-example.component';
-import { NgIfExampleComponent } from './ng-if-example/ng-if-example.component';
-import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.component';
-import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
-import { NgNonBindableExampleComponent } from './ng-non-bindable-example/ng-non-bindable-example.component';
+import { NgClassExampleComponent } from './examples/ng-class-example/ng-class-example.component';
+import { NgForExampleComponent } from './examples/ng-for-example/ng-for-example.component';
+import { NgIfExampleComponent } from './examples/ng-if-example/ng-if-example.component';
+import { NgStyleExampleComponent } from './examples/ng-style-example/ng-style-example.component';
+import { NgSwitchExampleComponent } from './examples/ng-switch-example/ng-switch-example.component';
+import { NgNonBindableExampleComponent } from './examples/ng-non-bindable-example/ng-non-bindable-example.component';
 
 export const examples: ExampleModel[] = [
 	{
