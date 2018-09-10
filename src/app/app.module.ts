@@ -17,6 +17,7 @@ import { NgForExampleComponent } from './ng-for-example/ng-for-example.component
 import { NgIfExampleComponent } from './ng-if-example/ng-if-example.component';
 import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.component';
 import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
+import { NgNonBindableExampleComponent } from './ng-non-bindable-example/ng-non-bindable-example.component';
 
 export const examples: ExampleModel[] = [
 	{
@@ -36,6 +37,10 @@ export const examples: ExampleModel[] = [
 		path: 'ng_if'
 	},
 	{
+		label: 'NgNonBindable',
+		path: 'ng_non_bindable'
+	},
+	{
 		label: 'NgStyle',
 		path: 'ng_style'
 	},
@@ -43,7 +48,6 @@ export const examples: ExampleModel[] = [
 		label: 'NgSwitch',
 		path: 'ng_switch'
 	},
-//  {label:	'NgNonBindable'}
 ];
 
 const routes: Routes = [
@@ -65,6 +69,11 @@ const routes: Routes = [
 	{
 		path: 'ng_if',
 		component: NgIfExampleComponent,
+		pathMatch: 'full'
+	},
+	{
+		path: 'ng_non_bindable',
+		component: NgNonBindableExampleComponent,
 		pathMatch: 'full'
 	},
 	{
@@ -90,6 +99,7 @@ const routes: Routes = [
 		NgIfExampleComponent,
 		NgStyleExampleComponent,
 		NgSwitchExampleComponent,
+		NgNonBindableExampleComponent,
 	],
 	imports: [
 		BrowserModule,
